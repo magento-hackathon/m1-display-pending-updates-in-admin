@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hackathon_VisibleAdminUpgrade>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Adminhtml/>
+                <Mage_Core/>
+            </depends>
+        </Hackathon_VisibleAdminUpgrade>
+    </modules>
+</config>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hackathon_VisibleAdminUpgrade>
+            <version>0.1.0</version>
+        </Hackathon_VisibleAdminUpgrade>
+    </modules>
+    <global>
+
+        <models>
+            <hackathon_visibleadminupgrade>
+                <class>Hackathon_VisibleAdminUpgrade_Model</class>
+                <resourceModel>hackathon_visibleadminupgrade_resource</resourceModel>
+            </hackathon_visibleadminupgrade>
+
+            <hackathon_visibleadminupgrade_resource>
+                <class>Hackathon_VisibleAdminUpgrade_Model_Resource</class>
+            </hackathon_visibleadminupgrade_resource>
+        </models>
+
+        <helpers>
+            <hackathon_visibleadminupgrade>
+                <class>Hackathon_VisibleAdminUpgrade_Helper</class>
+            </hackathon_visibleadminupgrade>
+        </helpers>
+
+        <events>
+            <controller_action_predispatch_adminhtml>
+                <observers>
+                    <hackathon_visibleadminupgrade>
+                        <type>singleton</type>
+                        <class>hackathon_visibleadminupgrade/observer</class>
+                        <method>controllerActionPredispatchAdminhtml</method>
+                    </hackathon_visibleadminupgrade>
+                </observers>
+            </controller_action_predispatch_adminhtml>
+        </events>
+
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <hackathonvisibleadminupgrade before="Mage_Adminhtml">Hackathon_VisibleAdminUpgrade_Adminhtml</hackathonvisibleadminupgrade>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+</config>
