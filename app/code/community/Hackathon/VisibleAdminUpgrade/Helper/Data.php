@@ -34,7 +34,7 @@ class Hackathon_VisibleAdminUpgrade_Helper_Data extends Mage_Core_Helper_Abstrac
             $status = version_compare($configVer, $dbVer);
             if ($status == Mage_Core_Model_Resource_Setup::VERSION_COMPARE_GREATER) {
                 if (!in_array($resName, $pendingUpdates)) {
-                    $pendingUpdates[] = $resName;
+                    $pendingUpdates[] = [$resName => $dbVer.'=>'.$configVer];
                 }
             }
         }
