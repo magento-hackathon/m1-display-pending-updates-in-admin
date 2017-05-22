@@ -1,7 +1,7 @@
 # m1-display-pending-updates-in-admin
 
 This Project disables running all setup scripts on every request and shows a fancy link in Admin to run the setup 
-scripts as needed. A shell script to tigger the updates will be available soon.
+scripts as needed. A shell script to tigger the updates ~will be available soon~ is also available.
 
 # Usage
 
